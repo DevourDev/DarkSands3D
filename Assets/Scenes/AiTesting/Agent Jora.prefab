@@ -126,6 +126,8 @@ GameObject:
   m_Component:
   - component: {fileID: 3461353826186220135}
   - component: {fileID: 8567588961136289210}
+  - component: {fileID: 115158229681373338}
+  - component: {fileID: 1413067243652483752}
   m_Layer: 20
   m_Name: Agent Jora
   m_TagString: Untagged
@@ -163,6 +165,40 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &115158229681373338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3461353826186220132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1efc0c494ef2a8544812df84a4ee5175, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _team: {fileID: 11400000, guid: 29f6615e278abf649b7f30c0553a346d, type: 2}
+  _maxSpeed: 5
+  _visionRadius: 10
+  _visionAngle: 40
+  _target:
+    _targetType: 0
+    _character: {fileID: 0}
+    _point: {x: 0, y: 0, z: 0}
+  _navMeshHelper: {fileID: 0}
+--- !u!114 &1413067243652483752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3461353826186220132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de0f605f0fd5ae84eba8f0fb96c3acef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _initialState: {fileID: 0}
 --- !u!1 &3461353826915078476
 GameObject:
   m_ObjectHideFlags: 0

@@ -4,7 +4,7 @@ namespace Game.Abilities
 {
     public sealed class AbilitiesStatesCollection
     {
-        private readonly Dictionary<AbilitySo, AbilityState> _states = new();
+        private readonly Dictionary<AbilityBase, AbilityState> _states = new();
 
 
         public AbilitiesStatesCollection()
@@ -13,7 +13,7 @@ namespace Game.Abilities
         }
 
 
-        internal TState GetState<TState>(AbilitySo ability)
+        internal TState GetState<TState>(AbilityBase ability)
             where TState : AbilityState, new()
         {
             if(!_states.TryGetValue(ability, out var stateRaw))

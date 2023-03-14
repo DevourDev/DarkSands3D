@@ -2,8 +2,7 @@
 
 namespace Game.AI
 {
-
-    [CreateAssetMenu(menuName = "Game/Ai/Team")]
+    [CreateAssetMenu(menuName = GameAssetsConstants.Ai + "Team")]
     public sealed class TeamSo : ScriptableObject
     {
         [SerializeField] private string _teamName;

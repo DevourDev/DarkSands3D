@@ -5,15 +5,9 @@ using UnityEngine.AI;
 
 namespace Game.Characters
 {
-    public enum TargetType
-    {
-        None,
-        Character,
-        Point
-    }
 
     [System.Serializable]
-    public sealed class Target
+    public struct Target
     {
         [SerializeField] private TargetType _targetType;
         [SerializeField] private Character _character;
@@ -27,7 +21,7 @@ namespace Game.Characters
         {
             _targetType = TargetType.Character;
             _character = characterTarget;
-        } 
+        }
 
         public void Init(Vector3 pointTarget)
         {

@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Game.Abilities
 {
-    public sealed class CompositeAbility : AbilitySo
+    public sealed class CompositeAbility : AbilityBase
     {
         [SerializeField] private DynamicStatAmount[] _costs;
 #if UNITY_EDITOR

@@ -6,7 +6,7 @@ namespace Game.Abilities
 {
     public sealed class AbilityContext : IDisposable
     {
-        public sealed class AbilityContextsPool : Pool<AbilityContext>
+        private sealed class AbilityContextsPool : Pool<AbilityContext>
         {
             protected override AbilityContext CreateEntity()
             {
@@ -40,6 +40,7 @@ namespace Game.Abilities
 
 
         public Character Caster { get; set; }
+        public Target Target { get; set; }
 
 
         public void Dispose()
