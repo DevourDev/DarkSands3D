@@ -1,9 +1,8 @@
-using UnityEngine;
+using DevourDev.Unity.ScriptableObjects;
 
 namespace Game.Characters.Actions
 {
-
-    public abstract class CharacterActionBase : ScriptableObject
+    public abstract class CharacterActionBase : SoDatabaseElement
     {
         public abstract void Act(Character actor);
     }

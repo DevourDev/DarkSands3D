@@ -1,4 +1,3 @@
-using Game.Abilities;
 using Game.AI;
 using Game.Characters.Stats.DynamicStats;
 using UnityEngine;
@@ -6,7 +5,7 @@ using UnityEngine;
 namespace Game.Characters
 {
     [DisallowMultipleComponent]
-    public sealed class Character : MonoBehaviour
+    public sealed class Character : MonoBehaviour //todo?: change monobeh to networkbeh (or not)
     {
         [SerializeField] private TeamSo _team;
         [SerializeField] private float _maxSpeed = 5f;
@@ -17,7 +16,6 @@ namespace Game.Characters
 
         private readonly DynamicStatsCollection _dynamicStatsCollection = new();
         private readonly SensorsDataCollection _sensorsDataCollection = new();
-        private readonly AbilityDatasCollection _abilityDatasCollection = new();
 
 
         public TeamSo Team { get => _team; set => _team = value; }
@@ -29,7 +27,6 @@ namespace Game.Characters
 
         public DynamicStatsCollection DynamicStatsCollection => _dynamicStatsCollection;
         public SensorsDataCollection SensorsDataCollection => _sensorsDataCollection;
-        public AbilityDatasCollection AbilityDatasCollection => _abilityDatasCollection;
 
 
         private void Awake()
